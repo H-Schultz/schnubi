@@ -67,6 +67,15 @@ module.exports = function (grunt) {
                     dumpLineNumbers: true
                 },
                 files: [
+                    { src: 'less/<%= pkg.name %>.less', dest: 'release/css/<%= pkg.name %>.css' }
+                ]
+            },
+            min: {
+                options: {
+                    compress: true,
+                    dumpLineNumbers: false
+                },
+                files: [
                     { src: 'less/<%= pkg.name %>.less', dest: 'release/css/<%= pkg.name %>.min.css' }
                 ]
             }
@@ -99,7 +108,7 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ["less/**/*.less"],
-                tasks: ['less:dev']
+                tasks: ['less:dev','less:min']
             }
         }
 
