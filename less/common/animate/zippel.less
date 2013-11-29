@@ -1,0 +1,35 @@
+
+@-webkit-keyframes zippel {
+  0% { -webkit-transform: perspective(400px) rotateX(0deg); }
+  35% { -webkit-transform: perspective(400px) rotateX(5deg); }
+  100% { -webkit-transform: perspective(400px) rotateX(0deg); }
+}
+
+@-moz-keyframes zippel {
+  0% { -moz-transform: perspective(400px) rotateX(0deg); }
+  35% { -moz-transform: perspective(400px) rotateX(5deg); }
+  100% { -moz-transform: perspective(400px) rotateX(0deg); }
+}
+
+@-o-keyframes zippel {
+  0% { -o-transform: perspective(400px) rotateX(0deg); }
+  35% { -o-transform: perspective(400px) rotateX(5deg); }
+  100% { -o-transform: perspective(400px) rotateX(0deg); }
+}
+
+@keyframes zippel {
+  0% { transform: perspective(400px) rotateX(0deg); }
+  35% { transform: perspective(400px) rotateX(5deg); }
+  100% { transform: perspective(400px) rotateX(0deg); }
+}
+
+.zippel {
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation-name: zippel;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: zippel;
+  -o-backface-visibility: visible !important;
+  -o-animation-name: zippel;
+  backface-visibility: visible !important;
+  animation-name: zippel;
+}

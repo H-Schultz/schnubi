@@ -1,0 +1,55 @@
+/*!
+ * Animate-library.less
+ * Cross-browser animation library
+ *
+ * Copyright 2012 Twitter, Inc
+ * Animate.css is licensed under the ☺ license
+ * http://licence.visualidiot.com/
+
+ *
+ * Designed and built with all the love in the world by @micr0bitz
+ */
+
+body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+  -webkit-backface-visibility: hidden;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+
+@import "animate/shine";
+@import "animate/shining";
+@import "animate/fadeIn";
+@import "animate/fadeInDown";
+@import "animate/fadeInDownBig";
+@import "animate/fadeInUp";
+@import "animate/fadeInUpBig";
+@import "animate/fadeInLeft";
+@import "animate/fadeInLeftBig";
+@import "animate/fadeInRight";
+@import "animate/fadeInRightBig";
+
+@import "animate/fadeOut";
+@import "animate/fadeOutDown";
+@import "animate/fadeOutDownBig";
+@import "animate/fadeOutUp";
+@import "animate/fadeOutUpBig";
+@import "animate/fadeOutLeft";
+@import "animate/fadeOutLeftBig";
+@import "animate/fadeOutRight";
+@import "animate/fadeOutRightBig";

@@ -1,0 +1,36 @@
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes shine {
+    0% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+@-webkit-keyframes shine {
+    0% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+@-moz-keyframes shine {
+    0% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.shine {
+    background: -webkit-linear-gradient(right bottom, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 45%, white 50%, rgba(255, 255, 255, 0.4) 55%, rgba(255, 255, 255, 0) 70%) no-repeat, transparent;
+    background: -moz-linear-gradient(right bottom, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 45%, white 50%, rgba(255, 255, 255, 0.4) 55%, rgba(255, 255, 255, 0) 70%) no-repeat, transparent;
+    -webkit-background-size: 500% 300%;
+    -moz-background-size: 500% 300%;
+    background-size: 500% 300%;
+    -webkit-animation-name: inner-glow, shine;
+    -moz-animation-name: inner-glow, shine;
+    animation-name: inner-glow, shine;
+    -webkit-animation-duration: 0.5s, 1s;
+    -moz-animation-duration: 0.5s, 1s;
+    animation-duration: 0.5s, 1s;
+    -webkit-animation-timing-function: ease-in, ease;
+    -moz-animation-timing-function: ease-in, ease;
+    animation-timing-function: ease-in, ease;
+    -webkit-animation-delay: 0s, 0s;
+    -moz-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s;
+    -webkit-animation-direction: alternate, normal;
+    -moz-animation-direction: alternate, normal;
+    animation-direction: alternate, normal;
+}
