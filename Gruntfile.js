@@ -62,20 +62,24 @@ module.exports = function (grunt) {
         },
 
         less: {
-            min: {
+            dev: {
                 options: {
-                    compress: true
+                    dumpLineNumbers: true
                 },
-                src: ['less/bootstrap.less'],
-                dest: 'release/css/<%= pkg.name %>.min.css'
+                files: [
+                    { src: 'less/<%= pkg.name %>.less', dest: 'release/css/<%= pkg.name %>.min.css' }
+                ]
             }
         },
 
         connect: {
             server: {
                 options: {
-                    port: 8020,
-                    base: '.'
+                    livereload: true,
+                    hostname: '*',
+                    port: 3000,
+                    base: '.',
+                    open: 'http://127.0.0.1:3000/release/index.html'
                 }
             }
         },
@@ -90,12 +94,12 @@ module.exports = function (grunt) {
                 files: '<%= jshint.src.src %>',
                 tasks: ['jshint:src'],
                 options: {
-                    spawn: false,
+                    spawn: false
                 }
             },
             css: {
                 files: ["less/**/*.less"],
-                tasks: ['less']
+                tasks: ['less:dev']
             }
         }
 
@@ -118,12 +122,6 @@ module.exports = function (grunt) {
         onChange();
     });
 
-    grunt.registerTask('default', [
-        'connect',
-        'jshint',
-        'concat',
-        'uglify',
-        'watch'
-    ]);
+    grunt.registerTask('default', [ 'connect', 'concat', 'uglify', 'watch' ]);
 
 };
