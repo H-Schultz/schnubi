@@ -1,0 +1,21 @@
+{
+    "logo": {
+        "lg": {
+            "src": "../../_assets/img/logo-lg.png",
+            "ratio": "52.27"
+        },
+        "sm": {
+            "src": "../../_assets/img/logo-sm.png",
+            "ratio": "56.21"
+        },
+        "default": {
+            "src": "../../_assets/img/logo-xs.png",
+            "ratio": "41.31"
+        }
+    },
+    "path": "page/",
+    "fileName": "page",
+    "baseUrl": "",
+    "nav": {
+    }
+}

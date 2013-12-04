@@ -1,0 +1,41 @@
+{
+    "teaser" :
+    [
+        {
+            "class"    : "col-md-4",
+            "headline" : "Lorem ipsum amet",
+            "text"     : "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+            "button" :
+            {
+                "class" : "btn-default btn-info",
+                "text"  : "Mehr »",
+                "title" : "Mehr »",
+                "href"  : "#Button"
+            }
+        },
+        {
+            "class"    : "col-md-4",
+            "headline" : "Lorem sit amet",
+            "text"     : "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+            "button" :
+            {
+                "class" : "btn-default btn-info",
+                "text"  : "Mehr »",
+                "title" : "Mehr »",
+                "href"  : "#Button"
+            }
+        },
+        {
+            "class"    : "col-md-4",
+            "headline" : "Lorem ipsum",
+            "text"     : "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+            "button" :
+            {
+                "class" : "btn-default btn-info",
+                "text"  : "Mehr »",
+                "title" : "Mehr »",
+                "href"  : "#Button"
+            }
+        }
+    ]
+}

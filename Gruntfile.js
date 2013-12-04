@@ -31,6 +31,17 @@ module.exports = function (grunt) {
             }
         },
 
+        'compile-handlebars': {
+            dev: {
+                template: 'tmpl/**/*.handlebars',
+                templateData: 'tmpl/data/*.json',
+                partials: 'tmpl/**/*.handlebars',
+                output: 'page/*.html',
+                helpers: 'tmpl/helper/*.js',
+                globals: ['tmpl/data/global.json']
+            }
+        },
+
         watch: {
             options: {
                 forever: true,
@@ -40,6 +51,10 @@ module.exports = function (grunt) {
             css: {
                 files: ["less/**/*.less"],
                 tasks: ['less:min']
+            },
+            'tmpl': {
+                files: ["tmpl/**/*.handlebars", "tmpl/data/*.json"],
+                tasks: ['handlebars']
             }
         }
 
@@ -48,6 +63,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
+
+    grunt.registerTask('handlebars', [ 'compile-handlebars' ]);
 
     grunt.registerTask('default', [ 'less', 'connect', 'watch' ]);
 
