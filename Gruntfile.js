@@ -8,21 +8,13 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         less: {
-            dev: {
-                options: {
-                    dumpLineNumbers: true
-                },
-                files: [
-                    { src: 'less/<%= pkg.name %>.less', dest: 'release/css/<%= pkg.name %>.css' }
-                ]
-            },
             min: {
                 options: {
                     compress: true,
                     dumpLineNumbers: false
                 },
                 files: [
-                    { src: 'less/<%= pkg.name %>.less', dest: 'release/css/<%= pkg.name %>.min.css' }
+                    { src: 'less/style.less', dest: 'page/css/style.min.css' }
                 ]
             }
         },
@@ -32,9 +24,9 @@ module.exports = function (grunt) {
                 options: {
                     livereload: true,
                     hostname: '*',
-                    port: 3000,
+                    port: 3030,
                     base: '.',
-                    open: 'http://127.0.0.1:3000/release/index.html'
+                    open: 'http://127.0.0.1:3030/page/index.html'
                 }
             }
         },
@@ -47,7 +39,7 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ["less/**/*.less"],
-                tasks: ['less:dev','less:min']
+                tasks: ['less:min']
             }
         }
 
@@ -57,6 +49,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', [ 'connect', 'watch' ]);
+    grunt.registerTask('default', [ 'less', 'connect', 'watch' ]);
 
 };
