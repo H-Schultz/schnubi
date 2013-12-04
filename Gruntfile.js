@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
         'compile-handlebars': {
             dev: {
-                template: 'tmpl/**/*.handlebars',
+                template: 'tmpl/*.handlebars',
                 templateData: 'tmpl/data/*.json',
                 partials: 'tmpl/**/*.handlebars',
                 output: 'page/*.html',
